@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>  INSERT TITLE HERE   </title>
+  <title>  Ultimo_Real_Estate/Home   </title>
   
   <meta name="author" content="      ADD YOUR NAME AND YOUR EMAIL ADDRESS HERE     ">
 
@@ -38,11 +38,54 @@
 </ul>
 </nav>
 
+<br>
+
+<h1 class="heading">Recommended Products/Services</h1>
+
 <main>
 
-<figure>
+<!--<figure>
 <img src="images/bulwara_road.jpg" width="990" height="430" alt="Bulwara Road">
-</figure>
+</figure>-->
+
+
+
+<div class="container"><!--START OF SLIDESHOW GALLERY-->
+
+  <div class="mySlides"><!--main slideshow section-->
+    <div class="numbertext">1 / 3</div>
+    <img class="wide_image" src="images/Bulwara Road.jpg" alt="bulwara_road property">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">2 / 3</div>
+    <img class="wide_image" src="images/fig_street.jpg" alt="fig_street property">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">3 / 3</div>
+    <img class="wide_image" src="images/jones_street.jpg" alt="bulwara_road property">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">◀</a>
+  <a class="next" onclick="plusSlides(1)">▶</a><!--end of main slideshow section-->
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+  
+  <div class="row"><!--start of gallery/thumbnails section-->
+    <div class="column">
+      <img class="demo cursor wide_image" src="images/bulwara_road_smol.jpg" alt="Bulwara Road" onclick="currentSlide(1)">
+    </div>
+    <div class="column">
+      <img class="demo cursor wide_image" src="images/fig_street_smol.jpg" alt="Fig Street" onclick="currentSlide(2)">
+    </div>
+    <div class="column">
+      <img class="demo cursor wide_image" src="images/jones_street_smol.jpg" alt="Jones Street" onclick="currentSlide(3)">
+    </div>
+  </div><!--end of gallery/thumbnails section-->
+
+
+</div><!--END OF SLIDESHOW GALLERY-->
 
 </main>
 
@@ -58,6 +101,9 @@
 
 
 </div>
+
+<!--link to javascript-->
+<script src="ultimo_real_estate.js"></script>
 
 </body>
 </html> 
