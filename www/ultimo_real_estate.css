@@ -1,11 +1,11 @@
-﻿* {
+﻿@import url('https://fonts.googleapis.com/css?family=Muli:400,700&display=swap');
+
+* {
 margin: 0em;
 padding: 0em;
 font-size: 100%;
 border-style: none;
 list-style-type: none;
-
-box-sizing: border-box;
 }
 
 body {
@@ -45,9 +45,7 @@ width: 1250px;
 margin: auto;
 margin-top: 40px;
 display: flex;
-
 justify-content: space-between;
-align-items: center;
 }
 
 /*SLIDESHOW GALLERY STYLING*/
@@ -144,69 +142,19 @@ opacity: 1;
 
 /*END OF SLIDESHOW GALLERY STYLING*/
 
-
-/*FAQ STYLING*/
-
-.accordion-container {
-	width: 90%;
-	max-width: 600px;
-	margin:10px auto;
-  }
-  button.accordion {
-	width: 100%;
-	background-color: whitesmoke;
-	border: none;
-	outline: none;
-	text-align: left;
-	padding: 15px 20px;
-	font-size: 18px;
-	color: #333;
-	cursor: pointer;
-	transition: background-color 0.2s linear;
-  }
-  button.accordion:after {
-	font-family: FontAwesome;
-	content: '\f150';
-	font-family: "fontawesome";
-	font-size: 14px;
-	float: right;
-  }
-  button.accordion.is-open:after {
-	content: '\f056';
-  }
-  button.accordion:hover, button.accordion.is-open {
-	background-color: #ddd;
-  }
-  .accordion-content {
-	background-color: white;
-	border-left: 1px solid whitesmoke;
-	border-right: 1px solid whitesmoke;
-	padding: 0 20px;
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height 0.2s ease-in-out;
-  }
-
-/*ENd OF FAQ STYLING*/
-
 section {
 width: 45%;
 }
 
 h1 {
 font-size: 34px;
-}
-
-/*some tiny styling for a heading at index*/
-.heading{
-	padding-left: 24px;
+padding-left: 25px;
 }
 
 h2 {
 font-size: 28px;
 margin-top: 5px;
 }
-
 
 
 section ul {
@@ -291,6 +239,77 @@ input[type=submit] {
 	padding: 2px 8px;
 }
 
+/*ACCORDION STYLING*/
+
+ul.accordion-list {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+	padding: 20px;
+	margin: 0;
+	list-style: none;
+	background-color: #f9f9fA;
+  }
+  ul.accordion-list li {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+	background-color: #FFF;
+	padding: 20px;
+	margin: 0 auto 15px auto;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  ul.accordion-list li.active h3:after {
+	transform: rotate(45deg);
+  }
+  ul.accordion-list li h3 {
+	font-weight: 700;
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+	padding: 0 0 0 0;
+	margin: 0;
+	font-size: 15px;
+	letter-spacing: 0.01em;
+	cursor: pointer;
+  }
+  ul.accordion-list li h3:after {
+	content: "+";
+	font-family: "material-design-iconic-font";
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: #Fcc110;
+	transition: all 0.3s ease-in-out;
+	font-size: 18px;
+  }
+  ul.accordion-list li div.answer {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+  }
+  ul.accordion-list li div.answer p {
+	position: relative;
+	display: block;
+	font-weight: 300;
+	padding: 10px 0 0 0;
+	cursor: pointer;
+	line-height: 150%;
+	margin: 0 0 15px 0;
+	font-size: 14px;
+  }
+
+/*END OF ACCORDION STYLING*/
+
 footer {
 width: 620px;
 margin: auto;
@@ -308,5 +327,8 @@ color: #273149;
 text-decoration: none;
 }
 
+.notgud{
+	color: red;
+}
 
 

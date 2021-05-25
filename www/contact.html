@@ -14,6 +14,17 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--the icons for accordion-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+
+  <!--jquery library link-->
+  <!--cdn version--><script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <!--local version--><script src="jquery-3.6.0.js"></script>
 </head>
 
 
@@ -67,21 +78,25 @@
 
 <h2>Property Enquiry</h2>
 
-<form method="post" action="#" id="form3">
+<form method="post" action="#" id="registration_form">
  
 <fieldset>
 <legend>Personal Information</legend>
 
 
 Name *:
-<input name="name" id="name" maxlength="30" tabindex="10">
-<!--validation notif--> <p id="error 1"></p>
+<input type="text" name="" id="form_fname" maxlength="30" tabindex="10" >
+<br>
+<div class="error_form notgud" id="fname_error_message"></div>
 
 Mobile *:
-<input type="tel" name="mobile" id="mobile" maxlength="15" tabindex="20">
-
+<input type="tel" name="" id="form_mobile" maxlength="15" tabindex="20">
+<br>
+<div class="error_form notgud" id="mobile_error_message"></div>
 Email *:
-<input type="email" name="email" id="email" tabindex="30"> 
+<input type="email" name="" id="form_email" tabindex="30"> 
+<br>
+<div class="error_form notgud" id="email_error_message"></div>
 
 <p>* = required fields</p>
 
@@ -89,6 +104,7 @@ Email *:
 
 <fieldset>
 <legend>Do you want to Buy or Sell or Rent?</legend>
+<div class="error_radio notgud" id="radio_error_message"></div>
 
 <div id="radio">
 Buy: 
@@ -102,24 +118,28 @@ Rent:
 
 <fieldset>
 <legend>What property type/s are you interested in?</legend>
+<div class="error_checkbox notgud" id="checkbox_error_message"></div>
 
 <div id="checkbox">
 Unit: 
-<input type="checkbox" name="unit" id="unit">
+<input type="checkbox" name="checka" id="unit" value="unit" class="check">
 
 Townhouse:
-<input type="checkbox" name="townhouse" id="townhouse">
+<input type="checkbox" name="checka" id="townhouse" value="townhouse" class="check">
 
 House:
-<input type="checkbox" name="house" id="house">
+<input type="checkbox" name="checka" id="house" value="house" class="check">
 
 </div>
 </fieldset>
 
     
     <strong>How many bedrooms do you require?</strong> 
+    <div class="error_dropdown notgud" id="dropdown_error_message"></div>
+
     <select name="bedrooms" id="bedrooms">
-	  <option value="0">Choose your preferred number of bedrooms</option>
+	  <!--<option value="0">Choose your preferred number of bedrooms</option>-->
+    <option value="">Choose your preferred number of bedrooms</option>
       <option value="studio">Studio</option>
       <option value="1">1 Bedroom</option>
       <option value="2">2 Bedrooms</option>
@@ -127,11 +147,13 @@ House:
     </select>
 
 <strong>Comments</strong>
+<br>
+<div class="error_comments notgud" id="comments_error_message"></div>
 <textarea name="comments" rows="5" cols="30" id="comments" maxlength="1000" ></textarea>
 
 
 
-    <input onclick="validation()" class="button" type="submit" value="Submit Enquiry">
+    <input class="button" type="submit" value="Submit Enquiry">
 
 
 </form>
@@ -154,9 +176,7 @@ House:
 
 </div>
 
-
-<!--link to javascript-->
-<script src="ultimo_real_estate.js"></script>
+<script src="index.js"></script>
 </body>
 </html> 
 
